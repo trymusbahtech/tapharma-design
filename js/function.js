@@ -100,8 +100,7 @@
 
 	if ($('.products-swiper').length) {
 		const  products = new Swiper(".products-swiper", {
-			 
-			slidesPerView: 4,
+			  
 			centeredSlides: false,
 			spaceBetween: 30,
 			grabCursor: true,
@@ -113,6 +112,20 @@
 				nextEl: '.product-button-next',
 				prevEl: '.product-button-prev',
 			},
+			breakpoints: {
+				 420:{
+                    slidesPerView:1
+                },
+                560:{
+                    slidesPerView:2
+                },
+                768:{
+                    slidesPerView:3
+                },
+                1100:{
+                    slidesPerView:4
+                }
+			}
 
 
 
