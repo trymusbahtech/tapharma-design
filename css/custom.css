@@ -175,12 +175,11 @@ body{
 	border-radius: 10px;
 	font-family: var(--accent-font);
 	font-size: 14px;
-	font-weight: 700;
-	background: linear-gradient(90deg, var(--primary-color) 27%, var(--primary-color) 20%, transparent);
+	font-weight: 600;
+	background: var(--secondary-color);
 	line-height: 1em;
 	text-transform: capitalize;
-	color: #fff;
-	border: none;
+	color: #ffffff;
 	padding: 17px 50px 17px 20px;
 	overflow: hidden;
 	transition: all 0.4s ease-in-out;
@@ -195,13 +194,14 @@ body{
 	content: '';
 	position: absolute;
 	top: 50%;
-    right: 20px;
+	right: 20px;
 	width: 20px;
 	height: 20px;
 	background-image: url('../images/arrow-primary.svg');
 	background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+	background-position: center center;
+	background-size: cover;
+	filter: brightness(1000);
 	transform: translateY(-50%);
 	transition: all 0.4s ease-in-out;
 	z-index: 1;
@@ -209,7 +209,6 @@ body{
 
 .btn-default:hover::before{
 	transform: translateY(-50%) rotate(45deg);
-	filter: brightness(0) invert(1);
 }
 
 .btn-default::after{
@@ -219,7 +218,7 @@ body{
 	bottom: 0%;
 	width: 102%;
 	height: 100%;
-	background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+	background: var(--primary-color);
 	transition: all 0.5s ease-in-out;
 	z-index: -1;
 	transform: skewY(9.3deg) scaleY(0);
@@ -234,11 +233,9 @@ body{
 }
 
 .btn-default.btn-highlighted:hover::before{
-	filter: none;
 }
 
 .btn-default.btn-highlighted::after{
-	background-color: var(--white-color);
 }
 
 .btn-default.btn-border{
@@ -303,6 +300,7 @@ body{
 	right: 0;
 	bottom: 0;
 	backdrop-filter: blur(65px);
+	background: #ffffffc9;
 	z-index: 1000;
 	display: flex;
 	align-items: center;
@@ -406,14 +404,15 @@ body{
 .section-title h3{
 	position: relative;
 	display: inline-block;
-	border: 1px solid var(--divider-color);
+	border-inline: 1px solid var(--divider-color);
 	border-radius: 100px;
 	font-size: 14px;
-    font-weight: 500;
+	font-weight: 500;
+	backdrop-filter: blur(27px);
 	text-transform: capitalize;
-    color: var(--primary-color);
+	color: var(--primary-color);
 	padding: 8px 16px 8px 32px;
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .section-title h3::before{
@@ -434,7 +433,7 @@ body{
 	line-height: 1.2em;
 	letter-spacing: -0.02em;
 	margin-bottom: 0;
-	cursor: none;
+	
 }
 
 .section-title h2{
@@ -443,7 +442,7 @@ body{
 	line-height: 1.2em;
 	letter-spacing: -0.02em;
 	margin-bottom: 0;
-	cursor: none;
+	
 }
 
 .section-title p{
@@ -532,6 +531,12 @@ header.fixed {
     -ms-transition: ease all 0.5s;
     background: #fff;
 
+	.navbar-brand {
+		img {
+			filter: unset;
+		}
+	}
+
 	.main-menu ul li a {
 		color: #272525;
 	}
@@ -547,8 +552,7 @@ header.fixed {
 	margin: 0;
 	
 	img {
-		height: 40px;
-		filter: drop-shadow(0.4px 0.4px 0px #fff);
+		height: 45px; 
 	}
 }
 
@@ -785,16 +789,16 @@ header.fixed {
 
 .hero::before{
 	content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-	background: linear-gradient(270deg, rgba(23, 44, 69, 0.00) 0%, rgba(23, 44, 69, 0.80) 60.83%);
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(270deg, rgba(23, 44, 69, 0.00) 0%, rgb(0 0 0 / 68%) 60.83%);
+	width: 100%;
+	height: 100%;
+	z-index: 1;
 }
 
 .hero.hero-video .hero-bg-video{
@@ -986,7 +990,7 @@ header.fixed {
 .hero-video-circle a{
 	display: inline-block;
 	border-radius: 50%;
-	cursor: none;
+	
 }
 
 .hero-video-circle img{
@@ -1190,7 +1194,7 @@ header.fixed {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	cursor: none;
+	
 }
 
 .video-play-button a:after,
@@ -2034,7 +2038,7 @@ header.fixed {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	cursor: none;
+	
 	transition: all 0.4s ease-in-out;
 }
 
@@ -2338,7 +2342,7 @@ header.fixed {
 }
 
 .testimonial-slider .swiper-wrapper{
-	cursor: none;
+	
 }
 
 .testimonial-item{
@@ -2469,7 +2473,7 @@ header.fixed {
 }
 
 .post-featured-image a{
-    cursor: none;
+    
     display: block;
 	border-radius: 20px;
     overflow: hidden;
@@ -2511,7 +2515,8 @@ header.fixed {
 .main-footer{
 	padding: 50px 30px 0;
 	margin-bottom: 50px;
-	background: linear-gradient(270deg, rgb(49 46 117) 0%, rgb(255 255 255 / 0%) 60.83%);
+	background: #fff;
+	box-shadow: 0px 2px 11px #00000015;
 }
 
 .about-footer{
@@ -2525,10 +2530,12 @@ header.fixed {
 .social-links ul {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
+    border-radius: 15px;
     list-style: none;
     margin: 0;
-    padding: 0;
+    background: #6dc38f1c;
+    padding: 10px;
 }
 .social-links ul li {
     margin-inline-end: 10px;
@@ -2765,7 +2772,7 @@ header.fixed {
 	font-size: 60px;
 	font-weight: 400;
 	color: var(--white-color);
-	cursor: none;
+	
     margin-bottom: 10px;
 }
 
@@ -2831,18 +2838,20 @@ header.fixed {
 	margin-bottom: 40px;
 }
 
-.mission-vision-item{padding: 30px;border-radius: 16px;background: #fff;}
+.mission-vision-item{padding: 30px;border-radius: 16px;position: relative;background: #fff;padding-top: 55px;}
 
 .mission-vision-item .icon-box{
-	position: relative;
-	width: 50px;
-	height: 50px;
+	position: absolute;
+	width: 70px;
+	height: 70px;
 	background-color: var(--accent-color);
 	border-radius: 50%;
 	display: flex;
+	transform: translate(-50% , -50%);
+	left: 50%;
+	top: 0;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 40px;
 }
 
 .mission-vision-item .icon-box:before{
@@ -2867,7 +2876,7 @@ header.fixed {
 .mission-vision-item .icon-box img{
 	position: relative;
 	width: 100%;
-	max-width: 24px;
+	max-width: 40px;
 	transition: all 0.4s ease-in-out;
 	z-index: 1;
 }
@@ -3047,7 +3056,7 @@ header.fixed {
 .team-image a,
 .team-image figure{
 	display: block;
-	cursor: none;
+	
 	border-radius: 20px;
 	overflow: hidden;
 }
@@ -4288,7 +4297,7 @@ header.fixed {
 }
 
 .page-gallery-box .photo-gallery a{
-	cursor: none;
+	
 }
 
 .page-gallery-box .photo-gallery figure{
@@ -4320,7 +4329,7 @@ header.fixed {
 .video-gallery-image a{
 	position: relative;
 	display: block;
-	cursor: none;
+	
 }
 
 .video-gallery-image a::before{
@@ -6636,6 +6645,10 @@ header.fixed {
 	width: 16px;
 	height: 16px;
 	}
+}
+
+.footer-links svg path {
+	fill: #312e75;
 }
 
 .flat-single-product {
