@@ -4790,7 +4790,7 @@ header.fixed {
 	}
 
 	.hero{
-		padding: 170px 0 80px;
+		padding: 240px 0 80px;
 	}
 
 	.hero.hero-slider-layout .hero-slide{
@@ -4802,7 +4802,6 @@ header.fixed {
 	}
 
 	.hero-body{
-		margin-top: 30px;
 		padding-top: 30px;
 	}
 
