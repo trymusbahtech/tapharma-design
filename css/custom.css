@@ -30,8 +30,7 @@ body{
 }
 
 ::-webkit-scrollbar-track{
-	background-color: var(--secondary-color);
-	border-left: 1px solid var(--secondary-color);
+	background-color: #fff; 
 }
 ::-webkit-scrollbar{
 	width: 7px;
@@ -171,19 +170,30 @@ body{
 
 .btn-default{
 	position: relative;
-	display: inline-block;
-	border-radius: 10px;
-	font-family: var(--accent-font);
-	font-size: 14px;
-	font-weight: 600;
-	background: var(--secondary-color);
-	line-height: 1em;
-	text-transform: capitalize;
-	color: #ffffff;
-	padding: 17px 50px 17px 20px;
-	overflow: hidden;
-	transition: all 0.4s ease-in-out;
-	z-index: 0;
+    display: inline-block;
+    font-family: var(--accent-font);
+    line-height: 1em;
+    text-transform: capitalize;
+    color: #393838;
+    overflow: hidden;
+    z-index: 0;
+    height: auto;
+    --clr-font-main: hsla(0 0% 20% / 100);
+    --btn-bg-1: hsl(0deg 0% 82.83%);
+    --btn-bg-2: hsl(0deg 0% 100% / 94%);
+    --btn-bg-color: hsla(360 100% 100% / 1);
+    --radii: 16px;
+    cursor: pointer;
+    padding: 16px 55px 14px 20px;
+    min-width: 120px;
+    min-height: 44px;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, hsl(0deg 0% 82.83% / 36%) 55%, var(--btn-bg-2) 90%);
+    border: none;
+    border-radius: var(--radii);
+    box-shadow: 0px 0px 20px rgb(112 112 112 / 21%), 0px 5px 5px -1px rgb(105 105 105 / 21%), inset 4px 4px 8px rgb(58 59 60 / 13%), inset -4px -4px 8px rgb(255 255 255 / 35%);
 }
 
 .btn-default:hover{
@@ -201,7 +211,7 @@ body{
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	filter: brightness(1000);
+	filter: grayscale(1);
 	transform: translateY(-50%);
 	transition: all 0.4s ease-in-out;
 	z-index: 1;
@@ -552,7 +562,8 @@ header.fixed {
 	margin: 0;
 	
 	img {
-		height: 45px; 
+		height: 45px;
+		filter: brightness(1000);
 	}
 }
 
@@ -795,7 +806,7 @@ header.fixed {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: linear-gradient(270deg, rgba(23, 44, 69, 0.00) 0%, rgb(0 0 0 / 68%) 60.83%);
+	background: #0000008c;
 	width: 100%;
 	height: 100%;
 	z-index: 1;
@@ -895,7 +906,6 @@ header.fixed {
 	flex-wrap: wrap;
 	gap: 20px 40px;
 	border-top: 1px solid var(--dark-divider-color);
-	margin-top: 40px;
 	padding-top: 40px;
 }
 
@@ -1531,7 +1541,7 @@ header.fixed {
 .why-choose-us{
 	background-image: url('../images/section-bg-shape-2.png');
 	background-repeat: no-repeat;
-	background-position: left -60px bottom 100px;
+	background-position: left center;
 	background-size: auto;
 	padding: 70px 0;
 }
@@ -2530,11 +2540,9 @@ header.fixed {
 .social-links ul {
     display: flex;
     align-items: center;
-    justify-content: center;
     border-radius: 15px;
     list-style: none;
     margin: 0;
-    background: #6dc38f1c;
     padding: 10px;
 }
 .social-links ul li {
@@ -2550,14 +2558,14 @@ header.fixed {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(255 255 255);
-    background: #322f75;
+    background: #fff;
+	border: 1px solid transparent;
     transition: 0.5s all;
+    box-shadow: 0px 1px 2px 0px rgba(3, 11, 30, 0.14);
 }
 .social-links ul li a:hover {
-    background: var(--secondary-color);
-    transition: 0.5s all;
-    color: #fff;
+    
+    transition: 0.5s all; 
 }
 .social-links ul li a i {
     font-size: 19px;
@@ -6536,8 +6544,9 @@ header.fixed {
 .history .swiper .swiper-slide .time p {
   margin: auto;
   background-color: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(3, 11, 30, 0.14);
   flex: 1;
-  padding: 20px 8px;
+  padding: 20px 20px;
   width: 100%;
   font-size: 14px;
   border-radius: 12px;
@@ -6653,4 +6662,29 @@ header.fixed {
 
 .flat-single-product {
 	
+}
+
+a:hover.social-fb {
+  border-color: #337FFF;
+}
+a:hover.social-twit {
+  border-color: #282828;
+}
+a:hover.social-lnkd {
+  border-color: #006699;
+}
+a:hover.social-insta {
+  border-color: #cf063f;
+}
+a.social-fb {
+  color: #337FFF;
+}
+a.social-twit {
+  color: #1c1c1c;
+}
+a.social-lnkd {
+  color: #006699;
+}
+a.social-insta {
+  color: #cf063f;
 }
