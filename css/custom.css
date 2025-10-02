@@ -249,8 +249,8 @@ body{
 }
 
 .btn-default.btn-border{
-	background: #60606000;
-	color: #414141;
+	background: #ffffff;
+	color: #4d4d4d;
 	border: 1px solid var(--white-color);
 	padding: 16px 50px 16px 20px;
 }
@@ -417,6 +417,7 @@ body{
 	border-inline: 1px solid var(--divider-color);
 	border-radius: 100px;
 	font-size: 14px;
+	color: #585858 !important;
 	font-weight: 500;
 	background: #ffffff80;
 	backdrop-filter: blur(27px);
@@ -474,7 +475,7 @@ body{
 .dark-section .section-title h2,
 .dark-section .section-title p,
 .dark-section .section-title-content p{
-	color: #464646;
+	color: #ffffff;
 }
 
 .dark-section .section-title h3{
@@ -556,7 +557,6 @@ header.fixed {
 .navbar {
 	padding: 25px 0;
 	align-items: center;
-	backdrop-filter: blur(17px);
 }
 
 .navbar-brand{
@@ -588,7 +588,7 @@ header.fixed {
 .main-menu ul li a{
 	font-size: 16px;
 	font-weight: 500;
-	color: #121212;
+	color: #ffffff;
 	line-height: 1.2em;
 	padding: 14px 10px !important;
 	text-transform: capitalize;
@@ -797,7 +797,7 @@ header.fixed {
 	background: url('../images/hero-bg.jpg') no-repeat;
 	background-position: center center;
 	background-size: cover;
-	padding: 180px 0 140px;
+	padding: 265px 0 90px;
 }
 
 .hero::before{
@@ -4687,8 +4687,18 @@ header.fixed {
 }
 
 
+@media only screen and (width> 1024px){
+
+	.hero {
+		height: 100vh;
+	}
+ 
+}
 @media only screen and (max-width: 1024px){
 
+	.hero {
+		height: 100vh;
+	}
 	.main-menu ul li{
 		margin: 0;
 	}
