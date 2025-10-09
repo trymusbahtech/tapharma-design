@@ -161,11 +161,8 @@
         slidesPerView: 3,
       },
       1400: {
-        slidesPerView: 3,
-      },
-      1800: {
         slidesPerView: 4,
-      },
+      } 
     },
   });
 	 
