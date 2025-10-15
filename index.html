@@ -112,8 +112,7 @@
         <!-- Video Start -->
         <div class="hero-bg-video">
             <!-- Selfhosted Video Start -->
-            <!-- <video autoplay muted loop id="myvideo"><source src="images/hero-bg-video.mp4" type="video/mp4"></video> -->
-            <video autoplay muted loop playsinline preload="auto" id="myvideo" ><source src="images/1.mp4" type="video/mp4"></video>
+            <video autoplay muted loop playsinline preload="auto" webkit-playsinline controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture id="myvideo" ><source src="images/1.mp4" type="video/mp4"></video>
             
             <!-- Selfhosted Video End -->
 
@@ -794,16 +793,7 @@
     <script src="js/wow.min.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-		const video = document.getElementById('myvideo');
-		if (video) { 
-			video.play().catch(err => console.log('Autoplay blocked:', err));
-		} else {
-			console.error('Video element not found!');
-		}
-		});
-    </script>
+    
 	
     <script> $('#footer').load('footer.html') </script>
 </body>

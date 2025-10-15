@@ -437,7 +437,7 @@
 	}
 	/* Services Item Active End */
 
-	
+	document.querySelector("video").play();
 	
 })(jQuery);
 
