@@ -436,7 +436,7 @@
 		}
 	}
 	/* Services Item Active End */
-	$("video[autoplay]").each(function(){ this.play(); });
+
 	
 	
 })(jQuery);
