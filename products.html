@@ -108,7 +108,7 @@
 
     <!-- Page Header Start -->
     <div class="page-header parallaxie">
-        <video src="images/bread3.mov" autoplay muted loop playsinline preload="auto"></video>
+        <video id="header-video" src="images/bread3.mov" autoplay muted loop playsinline preload="auto"></video>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -331,23 +331,7 @@
     <script src="js/wow.min.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('myvideo');
-            video.muted = true;
-            video.play().catch(() => {
-            // fallback لو ما اشتغلش تلقائيًا
-            console.log('Autoplay blocked by browser');
-            });
-        });
-        </script>
-        <script>
-            window.addEventListener('load', function() {
-                const v = document.getElementById('header-video');
-                v.muted = true;
-                v.play().catch(err => console.log('Autoplay blocked:', err));
-            });
-            </script>
+    
 	<script> $('#footer').load('footer.html') </script>
 </body>
 </html>
