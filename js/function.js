@@ -437,23 +437,6 @@
 	}
 	/* Services Item Active End */
 
-	 
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('myvideo');
-            video.muted = true;
-            video.play().catch(() => {
-            // fallback لو ما اشتغلش تلقائيًا
-            console.log('Autoplay blocked by browser');
-            });
-        });
-       
-            window.addEventListener('load', function() {
-                const v = document.getElementById('header-video');
-                v.muted = true;
-                v.play().catch(err => console.log('Autoplay blocked:', err));
-            });
-         
-
 	
 	
 })(jQuery);
